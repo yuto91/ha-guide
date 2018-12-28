@@ -1,37 +1,159 @@
-## Welcome to GitHub Pages
+# Home Assistant User Guide
 
-You can use the [editor on GitHub](https://github.com/yuto91/ha-guide/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## TABLE OF CONTENTS
 
-### Markdown
+ 1. Getting Started
+ 2. Google Home Commands
+ 3. Automations
+ 4. Future Plans
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## GETTING STARTED
 
-# Header 1
-## Header 2
-### Header 3
+Use the official Home Assistant app or a web browser to access the front end.
+Home Assistant can be accessed at ***. If using the app, use the following details to set up the connection:
+  * URL: ***
+  * Pass: ***
 
-- Bulleted
-- List
+Alternatively, you can use Google Home to say commands to Home Assistant. Invoke Google Home with “Hey Google” then follow with a command (e.g. “Turn on Kitchen Lights”). You can see a list of available commands in the next section.
+When giving commands, remember:
+  * Never use articles like “the”
+  * Use “cancel” to abort
+  * String together commands with “and” (you must provide an action for each entity, i.e., “turn on kitchen AND turn on living room” rather than “turn on kitchen and living room”)
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Google Home Commands
 
-[Link](url) and ![Image](src)
-```
+### Media Center
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  * Wii U
+  * Apple TV
+  * TV On/Off (check)
+  * Pause or Pause Music (check)
+  * Next or Next Song (check)
+  * Play [song/artist/album]
+  * Louder
+  * Softer
+  * Media Center Off (check)
 
-### Jekyll Themes
+### Lights
+  * Downstairs On/Off (check)
+  * Entryway Light On/Off
+  * Kitchen On/Off
+  * Left Kitchen Light On/Off
+  * Middle Kitchen Light On/Off
+  * Right Kitchen Light On/Off
+  * Living Room On/Off
+  * Main Light On/Off
+  * Light by Window On/Off
+  * Pendant Light On/Off
+  * Bedroom On/Off
+  * Lantern On/Off
+  * Floor Lamp On/Off
+  * Bedroom Pendant Light On/Off
+  * Sjopenna Lamp On/Off
+  * Spotlights On/Off
+  * Set [light] to...
+  * [percent]%
+  * Max
+  * Full (check)
+  * Dim (check)
+  * [color]
+  * Dim [light] (check)
+  * Dim [light group] (check)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/yuto91/ha-guide/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Downstairs – Scenes
+  * Turn on Default
+  * Turn on Hotline Bling
+  * Turn on Theater
+  * Turn on/off Color Loop
 
-### Support or Contact
+### Downstairs – Scripts
+  * Sleep Mode On
+  * Downstairs Off (same as above)
+  * Do Not Disturb Downstairs On/Off (check)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Bedroom – Scenes
+  * Turn on Default in Bedroom
+  * Turn on Hotline Bling in Bedroom
+  * Turn on Theater in Bedroom
+  * Turn on/off Color Loop in Bedroom (check)
+
+### Bedroom – Scripts
+  * Bedtime
+  * Do Not Disturb in Bedroom On/Off (check)
+
+### Miscellaneous
+  * Set volume to [0-10]
+  * Broadcast
+  * Weather
+  * Temperature
+  * Time
+  * Panic (pending)
+  * Who’s Home? (pending)
+  * Set timer for [num] minutes
+  * Set alarm for [time]
+
+### Dev
+  * Restart
+  * Reload automations
+  * Reload scripts
+  * Reload groups
+  * Sync
+
+
+## AUTOMATIONS
+
+### Time-based Automations
+
+  * Sunset
+    Turns on entryway light just before the sun sets
+
+  * Bedtime Weekday/Weekend
+    Turns off bedroom lights and turns on Do Not Disturb for predefined duration of sleep
+
+  * Bedtime Phone Charge Alert
+    Warns user before bed if battery is low and phone isn’t plugged in
+
+  * Street Sweeping Alert
+    Sends a notification to user’s phone the afternoon before street sweeping begins
+
+### Weather-based Automations
+
+  * Severe Weather Alert
+    When a special weather statement is issued, the lights flash red and the statement is     announced on Google Home and shown on the Home Assistant front end
+
+### Device Tracker-based Automations
+
+  * Roommate Is Home
+    Lights flash and announcement is made on Google Home when a roommate arrives home (bedroom     only)
+
+  * Guest Is Here
+    Lights flash and announcement is made on Google Home when a guest arrives
+
+  * User Home/Not Home
+    Bedroom lights turn on/off when a user arrives home
+
+### Other automations
+
+  * Update Available
+    Sends a notification to user’s phone when an update for Home Assistant is available
+
+  * Work Commute Alert
+    Announces on Google Home and sends a notification to user when the morning commute is expected to take 3 minutes longer than usual
+
+  * Nightly Maintenance Restart
+    Restarts home assistant as part of preventative maintenance
+
+
+## FUTURE PLANS
+
+### Features in progress
+    (blank)
+
+### Suggestions for improvement
+    (blank)
+
+### Feature requests
+    (blank)
